@@ -10,6 +10,10 @@ app.use(express.json());
 // const { v4: uuidv4 } = require('uuid');
 // const https = require('https');
 
+app.get('/', async (req, res, next) => {
+  res.status(200).send('Cool man');
+});
+
 app.post('/omilia-encrypted', async (req, res, next) => {
     console.log(req.body);
     res.json(req.body)
